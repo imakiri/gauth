@@ -1,0 +1,8 @@
+VERSION 2.0
+PROJECT gauth
+SCHEMA main /!C(?<commit>\d+)(?: !R(?<release>\d+))?:(?<notes>[\s\S]+?)(?=\s!|$)/g
+SCHEMA main.notes /--([\s\S]+?)(?=\s--|$)/g
+DATA
+
+!C1:
+    --Initial commit, copied from gorum 34.17
