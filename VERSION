@@ -1,8 +1,16 @@
-VERSION 2.0
+VERSION 1.2
 PROJECT gauth
-SCHEMA main /!C(?<commit>\d+)(?: !R(?<release>\d+))?:(?<notes>[\s\S]+?)(?=\s!|$)/g
+SCHEMA main /!V(?<release>\d+)(?:\.(?<commit>\d+))(?:\.(?<subcommit>\d+))?:(?<noteList>[\s\S]+?)(?=\s!|$)/g
 SCHEMA main.notes /--([\s\S]+?)(?=\s--|$)/g
 DATA
 
-!C1:
-    --Initial commit, copied from gorum 34.17
+!V0.2:
+    --message, email: Code refactoring and clean up
+    --telegram: Added Service interface
+
+!V0.1:
+    --gauth: Added exposed types and interfaces
+    --Project schema
+
+!V0.0:
+    --Initial commit, copied from gorum 0.74(34.17)

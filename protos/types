@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package types;
+
+option go_package = "github.com/imakiri/gauth";
+
+message RequestRegistrationBegin {
+  repeated string Keys = 1;
+  string GroupName = 2;
+  string Method = 3;
+  string Identity = 4;
+}
+
+message RequestAuthenticationBegin {
+  repeated string Keys = 1;
+  string Method = 2;
+  string Identity = 3;
+}
+
+message ResponseKeys {
+  repeated string Keys = 1;
+}
+
+message RequestComplete {
+  repeated string Keys = 1;
+  string Code = 2;
+}
+
+message RequestAuthorization {
+  repeated string Keys = 1;
+  string ObjectID = 3;
+  string FunctionName = 4;
+}
+
