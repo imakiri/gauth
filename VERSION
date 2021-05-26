@@ -4,6 +4,10 @@ SCHEMA main /!V(?<release>\d+)(?:\.(?<commit>\d+))(?:\.(?<subcommit>\d+))?:(?<no
 SCHEMA main.notes /--([\s\S]+?)(?=\s--|$)/g
 DATA
 
+!0.3:
+    --gauth: Code refactoring and clean up
+    --gauth: Added GroupManagers, PermissionManager and related to them interfaces
+
 !V0.2:
     --message, email: Code refactoring and clean up
     --telegram: Added Service interface
