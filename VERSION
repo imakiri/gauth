@@ -4,6 +4,9 @@ SCHEMA main /!V(?<release>\d+)(?:\.(?<commit>\d+))(?:\.(?<subcommit>\d+))?:(?<no
 SCHEMA main.notes /--([\s\S]+?)(?=\s--|$)/g
 DATA
 
+!0.4:
+    --gauth: New version
+
 !0.3:
     --gauth: Code refactoring and clean up
     --gauth: Added GroupManagers, PermissionManager and related to them interfaces
